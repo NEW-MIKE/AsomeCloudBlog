@@ -235,11 +235,24 @@ runBlocking {
 
 做这一次进攻的目的，在于看起来，这个东西很烦，体验一下自己的战斗力。
 
+#### 关于委托by：
+
+被委托的对象，其读写都被委托的对象替换掉。有什么好处呢，不就是用这个申明吗。那么上面这段伪码，你打算插入到哪里呢？难道B和C就一直不停的用While循环做上述判断吗？显然不合适吧。
+https://www.cnblogs.com/guoqiang1/p/8138889.html
+https://blog.csdn.net/weixin_39309402/article/details/98126885
+https://xuyisheng.top/kotlin5/
+https://juejin.cn/post/6844904038589267982
+
 ### 难度挑战：
 
 使用泛型，内联，Lambda，逐步的赋能，并且在上面对于每一次的变化，进行识别。
 
 
 
-参考：
+### 参考：
+
 https://www.kotlincn.net/docs/reference/lambdas.html
+https://developer.android.com/kotlin
+https://developer.android.com/courses/android-basics-kotlin/unit-1
+https://kotlinlang.org/docs/android-overview.html
+https://developer.android.com/kotlin/first
