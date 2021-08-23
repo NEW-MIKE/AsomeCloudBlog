@@ -98,6 +98,18 @@
 
 
 
+### 规划如何把这件事做妥当，闭环是什么：
+
+1，这个的应用场景是什么
+2，需要准备哪些部件
+3，如何操作这些部件
+
+
+
+
+
+
+
 
 
 ### 参考：
@@ -107,3 +119,4 @@ https://blog.csdn.net/carson_ho/article/details/52693322
 https://developer.android.com/guide/webapps/best-practices?hl=zh-cn
 https://developers.google.com/speed?hl=zh-cn
 https://developer.android.com/reference/android/webkit/WebView
+
