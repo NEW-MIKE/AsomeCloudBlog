@@ -1,10 +1,16 @@
+### 实战规划：
+
+在使用的过程中，先了解全局，再确定流程，再找重点，再写个小demo，再看官方代码，github代码。提出解决方案，
+
+
+
 ### 原理：
 
 在这个过程中，WebView只是提供一个平台，在平台上可以跳舞的，是我们的看到的内容，对于内容的可以控制。其效果可以等效于，自己编写自己的浏览器。在html，js，css，然后将自己的想要的东西，赋予这个之上，这个是否可以覆盖前端还有H5，小程序的范畴，这是一个亟待解决的方程式。
 
 #### 1，想象力空间：
 
-
+其存活的空间里面，如何管理这个对象，如果是我来操作这个场景，会如何设计这个闭环，首先，这个部分会加载网页，网页里面有内容和控件，操作控件可以产生动作，
 
 #### 2，操作步骤：
 
@@ -25,7 +31,7 @@
     
 ```
 
-2，添加网络权限：
+##### 2，添加网络权限：
 
 ```
     <manifest ... >
@@ -95,6 +101,8 @@
 
 1，这个与网页访问的区别和联系，如何理解。
 2，我要达到一个标准，超越现在的一切的网文，在不看他们之前，我就知道了大概的论述的范畴。
+3，这个WebView可以联合起来，和native一起起作用。
+4，讲道理来说，这个部分获取到的html都是可以拦截并进行修改的。
 
 
 
@@ -103,6 +111,7 @@
 1，这个的应用场景是什么
 2，需要准备哪些部件
 3，如何操作这些部件
+4，从政治的角度来说，掌控这个部分，应该不成为问题的。
 
 
 
@@ -115,8 +124,24 @@
 ### 参考：
 
 https://developer.android.com/guide/webapps/webview
-https://blog.csdn.net/carson_ho/article/details/52693322
-https://developer.android.com/guide/webapps/best-practices?hl=zh-cn
+
+Android：你要的WebView与 JS 交互方式 都在这里了 https://blog.csdn.net/carson_ho/article/details/52693322
+Web 应用最佳做法 https://developer.android.com/guide/webapps/best-practices?hl=zh-cn
 https://developers.google.com/speed?hl=zh-cn
 https://developer.android.com/reference/android/webkit/WebView
+WebView与JavaScript交互的四种形式 https://www.huaweicloud.com/articles/9130edb6447d33673f3199227c4dff6f.html
+WebView的状态设置类WebSetting https://blog.csdn.net/changjinglubeipan/article/details/101280943
+[安卓webview断网处理](https://www.cnblogs.com/jymblog/p/9767397.html)
+如何设计一个优雅健壮的Android WebView？（下）  https://juejin.cn/post/6844903567506014222
+WebView库功能完善 https://juejin.cn/post/6844904175592030216
+[一行代码使用CSS的黑暗模式](https://segmentfault.com/a/1190000023598551) https://segmentfault.com/a/1190000023598551
 
+## 想要实现什么样的效果:
+
+
+
+## 外部联盟:
+
+Jsoup:https://www.cnblogs.com/zhangyinhua/p/8037599.html
+Java中解析HTML框架之Jsoup https://zhuanlan.zhihu.com/p/348862963
+[前端安全系列（一）：如何防止XSS攻击？](https://tech.meituan.com/2018/09/27/fe-security.html)
