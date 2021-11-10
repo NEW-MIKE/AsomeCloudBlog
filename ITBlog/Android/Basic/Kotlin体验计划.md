@@ -249,6 +249,277 @@ https://juejin.cn/post/6844904038589267982
 
 
 
+## 容器化学习：
+
+#### 第一容器：
+
+该容器的作用，在于将多个订阅源进行合并统一处理，并将结果处理后传递出来。巧妙利用高阶函数。
+
+```kotlin
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
+
+object LiveDataUtil {
+    fun <T1, T2, R> zip2(
+        src1: LiveData<T1>, src2: LiveData<T2>,
+        zipper: (T1, T2) -> R
+    ): LiveData<R> {
+        return MediatorLiveData<R>().apply {
+            var src1Version = 0
+            var src2Version = 0
+            var lastSrc1: T1? = null
+            var lastSrc2: T2? = null
+            fun updateValueIfNeeded() {
+                if (src1Version > 0 && src2Version > 0 &&
+                    lastSrc1 != null && lastSrc2 != null
+                ) {
+                    value = zipper(lastSrc1!!, lastSrc2!!)
+                    src1Version = 0
+                    src2Version = 0
+                }
+            }
+            addSource(src1) {
+                lastSrc1 = it
+                src1Version++
+                updateValueIfNeeded()
+            }
+            addSource(src2) {
+                lastSrc2 = it
+                src2Version++
+                updateValueIfNeeded()
+            }
+        }
+    }
+}
+```
+
+1，对于Kotlin，由于其默认本身的任何的变量都是非空的，当一个变量可能为空的时候，在申明的时候，我们需要将其类型背后加？。为了调用非空类型的属性和或者函数，可以使用？.来判断是否能够调用属性或函数，Evvis是用来在空与否的时候，到底返回什么值。！！用来断言此处一定不是空，否则，调用将会异常。
+            var lastSrc1: T1? = null
+            var lastSrc2: T2? = null
+所以以上，我们只能用一个来申明变量，且只有如此，才能给它赋值为null空。
+value = zipper(lastSrc1!!, lastSrc2!!)
+函数调用的时候，肯定会进行非空检查的，为了在编译器那里能够编译通过，我们需要使用非空断言来编译通过。此处没有涉及到对象的属性和函数的调用，其他的使用形式不论。
+
+2，object关键字主要在申明一个类的同时，生成这个类的对象：对象表达式，对象声明，伴生对象。它的用处在于可以省略其约束的类名（也叫做匿名类），如果类是有构造函数的，那么后面是要有小括号的，如果没有，小括号可以省略。
+object LiveDataUtil {
+此处的作用在于static的使用方式，所以用到了关键词object，当使用这个类名的时候，自动生成了实例。
+
+3，在函数名之前添加<>就是泛型函数了，可以用大小写的英文字母，如果是多个参数类型，用逗号分开。当为了约束泛型的时候，可以使用冒号。如果是可以比较的类型可以将<T:Comparable<T>> ,<T:Number>,.如果不想接收任何可空数据类型，可以《T：Any》,可空的话，写为《T：Any?》
+Kotlin中的泛型属性一定是扩展属性。
+泛型类，在类的名字后面<T>.泛型接口也是类似。
+    fun <T1, T2, R> zip2(
+        src1: LiveData<T1>, src2: LiveData<T2>,
+        zipper: (T1, T2) -> R
+    ): LiveData<R> {
+此处用到的是泛型函数，且是三个泛型参数，返回值也是一个泛型类的声明。这个函数传入三个形参，前面两个是LiveData，后面是一个函数。
+
+4，高阶函数：在函数式编程中，一切皆是函数，所谓高阶函数就是一个函数可以作为另外一个函数的参数或返回值。可以将函数视为一个数据类型。函数类型的定义为形参和返回值，在表达上面是（A,B）->C.函数列表中的参数类型 ->返回类型。四个点：：函数名。
+zipper: (T1, T2) -> R，此处的zipper就是一个函数变量，类型是两个形参，一个返回值的类型。
+
+5，Lambda表达式
+Lambda是一种匿名函数，可以作为表达式，函数参数和函数返回值使用。其运算结果就是一个函数。用箭头来讲参数列表和Lambda体分开。如果没有return，Lambda最后一个表达式就是其返回值，如果有就是return后面的表达式。所以其返回值是推导出来的。相对于函数类型，其没有小括号。Kotlin有很强的类型推导能力。所以其参数类型和返回值类型可以省略，直接交给编译器来进行推导。另外，如果一个函数的最后一个参数是Lambda表达式，那么这个Lambda表达式可以放在函数括号之后。这叫做尾随Lambda表达式，很多时候，容易被误认为是函数声明。
+如果Lambda表达式的参数只有一个，并且能够根据上下文环境推导出它的数据类型，那么这个参数声明就可以省略，在Lambda体中使用隐式参数it替代Lambda表达式的参数。
+闭包closure是一种特殊的函数，可以访问函数体之外的变量。
+在高阶函数中参数如果是函数类型，则可以接收Lambda表达式，而Lambda表达式在编译时被编译成为一个匿名类，每次调用函数时都会创建一个对象，如果被函数反复调用则创建很多对象，会带来运行时的额外开销。可以用内联函数解决。使用inline修饰。
+let：let是一个函数，当调用他的对象是空的时候，不调用后面的代码，否则调用。所有的对象都可以调用这个函数。
+with，apply。当需要对一个对象设置多个属性或调用多个函数时，可以调用。apply返回其对象，with不返回。使用this访问其对象。以上是内联函数的使用场景。
+ (T1, T2) -> R此处即是一个函数类型声明，也是一个Lambda表达式，
+return MediatorLiveData<R>().apply {
+此处使用的是为了修改其属性或者函数，所以调用了apply这个内联函数，返回的也是其对象的本身。
+value = zipper(lastSrc1!!, lastSrc2!!)此处是一个闭包的调用，           
+ addSource(src1) {
+                lastSrc1 = it
+                src1Version++
+                updateValueIfNeeded()
+            }
+此处也是其函数的一个调用，其中it隐式参数代表的是src1,
+
+```kotlin
+val articlePage =LiveDataUtil.zip2(articleList, topArticleList) { list, top ->
+    list.data?.datas?.let {
+        top.data?.run {
+            forEach { a -> a.top = true }
+            (it as MutableList<ArticleVO>).addAll(0, this)
+        }
+        it.forEach { a ->
+            a.read = dao.isRead(username, a.id)
+        }
+    }
+    hasMore.value = !(list.data?.over ?: false)
+    list.data?.run {
+        if (curPage == 1) {
+            refreshing.value = false
+        } else {
+            moreLoading.value = false
+        }
+    }
+    list.data
+}
+```
+
+以上是实际调用的地方，采用的是尾随调用的方式，zipper被替换成为了后面的Lambda表达式表示的函数部分。且这个值会传给value。而value又会是zip2函数返回值本身，就是articlePage。其返回值是自动推定出来的。
+
+6，forEach:此函数适用于Collection，Map集合以及数组，函数只有一个函数类型的参数，实参往往使用尾随形式的Lambda表达式。在执行forEach会把集合或数组中的每一个元素传递给Lambda表达式（或其他的函数引用）以便去执行。
+        it.forEach { a ->
+            a.read = dao.isRead(username, a.id)
+        }
+此处就是一个尾随的函数，每一个值给a，然后交给以a为参数的函数来执行，后面是一个Lambda表达式。
+
+7，run，有返回值，且是最后一个值。相对于apply来说，它可以指定自己的返回值。with和run类似，差别在语法方面。with在括号里面提供上下文。
+
+8，MediatorLiveData 中介者LiveData,
+
+- 它可以监听另一个LiveData的数据变化，
+- 同时也可以做为一个liveData，被其他Observer观察。
+- MediatorLiveData 主要有四个方法
+  - addSource
+  - removeSource
+  - onActive
+  - onInactive
+
+主要用于合并多个变化源，addSource可以保证被监视Livedata不会被重复订阅，如果我们手动observe的话，可能会因为重复订阅造成数据接受异常，通过addSrouce的源码可以清楚看到这一点，在简单的代码中，这样的bug很容易被察觉，但在一个复杂项目中，像这样的时序问题在写代码的时候很容被忽略，所以当大家使用LiveData时，要多利用MediatorLiveData这样的工具，哪怕多写两行代码，也要保证时序的准确性。
+            addSource(src1) {
+                lastSrc1 = it
+                src1Version++
+                updateValueIfNeeded()
+            }
+此处表明了它对src1进行了监听。
+
+10，Transformations.switchMap(page) 此种调用方式，其关键是在于其返回值，默认最后一个就是其返回值，而传入的只是一个参数而已。
+
+#### 第二容器：
+
+此处容器的作用在于属性扩展，将懒加载进行封装，作为ViewModel的统一的提供方式。目的在于简化这样的调用。将所有的非逻辑的模板封装出去。
+
+```kotlin
+import android.app.Activity
+import android.os.Parcelable
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProviders
+
+inline fun <reified T : ViewModel> FragmentActivity.viewModel() =
+    lazy { ViewModelProviders.of(this).get(T::class.java) }
+
+inline fun <reified T : ViewModel> FragmentActivity.viewModel(crossinline block: T.() -> Unit) =
+    lazy {
+        ViewModelProviders.of(this).get(T::class.java).apply(block)
+    }
+
+inline fun <reified T : ViewModel> Fragment.viewModel() =
+    lazy { ViewModelProviders.of(this).get(T::class.java) }
+
+/**
+ * 相同类型使用多个的情况下
+ */
+@JvmOverloads
+inline fun <reified T : ViewModel> Fragment.viewModel(
+    key: Int? = null,
+    crossinline block: T.() -> Unit
+) =
+    lazy {
+        ViewModelProviders.of(this).get(key.toString(), T::class.java)
+            .apply(block)
+    }
+
+/**
+ * 获取参数
+ */
+inline fun <reified T> Activity.arg(key: String) =
+    lazy {
+        val ret = when (T::class.java) {
+            String::class.java -> intent.getStringExtra(key)
+            Int::class.java -> intent.getIntExtra(key, 0)
+            Float::class.java -> intent.getFloatExtra(key, 0f)
+            Boolean::class.java -> intent.getBooleanExtra(key, false)
+            else -> (intent.getParcelableExtra(key) as Parcelable)
+        }
+        ret as T?
+    }
+
+inline fun <reified T> Fragment.arg(key: String) =
+    lazy {
+        val ret = when (T::class.java) {
+            String::class.java -> arguments?.getString(key)
+            Int::class.java -> arguments?.getInt(key)
+            else -> null
+        }
+        ret as T?
+    }
+```
+
+1，扩展函数：Kotlin 能够扩展一个类的新功能而无需继承该类或者使用像装饰者这样的设计模式。 这通过叫做 *扩展* 的特殊声明完成。 例如，你可以为一个你不能修改的、来自第三方库中的类编写一个新的函数。 这个新增的函数就像那个原始类本来就有的函数一样，可以用普通的方法调用。 这种机制称为 *扩展函数* 。此外，也有 *扩展属性* ， 允许你为一个已经存在的类添加新的属性。声明一个扩展函数，我们需要用一个 *接收者类型* 也就是被扩展的类型来作为他的前缀。
+在以上的所有的函数，都是作为扩展函数存在的，且依赖于接收者类型。表示该函数依存于什么接收者。如果是这种类型的，那么所有的这种类型的变量都可以进行调用。
+
+2，reified
+使用reified很简单，主要分为两步
+
+- 在泛型类型前面增加`reified`
+- 在方法前面增加`inline`（必需的
+  至于能在运行时得到`T`的类型信息是如何做到的，就需要了解`reified`的内部机制了。Java通过类型擦除实现泛型，不会生成新的类。
+  ps：此处是为了在运行时获取到类型的信息，所以才用了这个关键字。
+
+3，lazy
+是接受一个 lambda 并返回一个 `Lazy <T>` 实例的函数，返回的实例可以作为实现延迟属性的委托： 第一次调用 `get()` 会执行已传递给 `lazy()` 的 lambda 表达式并记录结果， 后续调用 `get()` 只是返回记录的结果。
+以上都是函数的返回值，其值只在首次访问时计算，所以使用了该关键字。
+
+4，by
+`by` keyword as ***provided by\***.
+此处的意义，在于制定什么来提供。
+
+5，as？
+*null* 不能转换为 `String` 因该类型不是[可空的](https://www.kotlincn.net/docs/reference/null-safety.html)， 即如果 `y` 为空，上面的代码会抛出一个异常。 为了让这样的代码用于可空值，请在类型转换的右侧使用可空类型：val x: String? = y as String?为了避免抛出异常，可以使用*安全*转换操作符 *as?*，它可以在失败时返回 *null*：
+
+```
+val x: String? = y as? String
+```
+
+请注意，尽管事实上 *as?* 的右边是一个非空类型的 `String`，但是其转换的结果是可空的。
+
+6，T.()
+Now we can write **DSL style code** because of this. Let's see kotlin standard library function `Apply`
+
+```kotlin
+public inline fun <T> T.apply(block: T.() -> Unit): T { block(); return this }
+```
+As you can see apply is an Extension function of T, **block** will be function with receiver type **T**,
+**Because of T.()** T will be available as the first argument in lambda.
+Now here block is invoked by **block()** inside function body, but you can also write **this.block() or block(this)**
+crossinline block: T.() -> Unit
+) =
+    lazy {
+        ViewModelProviders.of(this).get(key.toString(), T::class.java)
+            .apply(block)
+此处就是说，其扩展函数是可以调用xxx.block的。.apply(block)的意义，具备xxx.block()的效果。
+
+7，crossinline
+
+- `inline`: 声明在编译时，将函数的代码拷贝到调用的地方(内联)
+- `oninline`: 声明 `inline` 函数的形参中，不希望内联的 `lambda`
+- `crossinline`: 表明 `inline` 函数的形参中的 `lambda` 不能有 `return`
+
+8，@JvmOverloads
+
+但是如果使用的了@JvmOverloads注解：
+
+```kotlin
+@JvmOverloads fun f(a: String, b: Int=0, c:String="abc"){
+}
+```
+
+相当于在Java中声明了3个方法：
+
+```dart
+void f(String a)
+void f(String a, int b)
+void f(String a, int b, String c)
+```
+
+正如备注，构造多个构造函数。
+
+
+
 ### 参考：
 
 https://www.kotlincn.net/docs/reference/lambdas.html
