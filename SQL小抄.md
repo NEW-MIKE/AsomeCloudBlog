@@ -523,4 +523,6 @@ PIVOT
 (
     MAX(value) FOR col IN ([length],[width],[l_unit],[w_unit]) -- 這裡一定要有一個aggregate function
 ) AS pivottable
+
+
 ```
