@@ -5,3 +5,60 @@
 = 下载须知 及 格式说明 =
 
 <h2>更新通知</h2>
+
+
+= 1 政治 =
+
+'''【网盘】'''
+
+[https://onedrive.live.com/redir?resid=F5B0090663FEEADA!742 微软网盘]
+
+BT Sync 密钥：BRSSYZTSAC6UGYTUOJ22L4GCO7QESPPBD （此密钥的使用方法，参见页面开头的“网盘下载须知”）
+
+== 1.1 政治理论 ==
+
+=== 1.1.1 民主与宪政 ===
+
+{|
+! 中文书名 !! 英文书名 !! 作者 !! 文件类型 !! 上传日期 !! 备注
+|-
+| 论民主 || On Democracy || (美) [https://zh.wikipedia.org/wiki/%E7%BE%85%E4%BC%AF%C2%B7%E9%81%93%E7%88%BE 罗伯特·道尔] || 简体PDF(第1版 扫描版)<br>英文PDF(第1版 扫描版) || 2014-06-22<br>2020-01-25 || [https://docs.google.com/document/d/1XObNi7yZ86vXO193IdGmkBgCIQwHNFamTK6FUbJYZZ4/ 简介]
+|-
+| 第三波<br>——20世纪后期民主化浪潮 || The Third Wave<br>——Democratization in the Late Twentieth Century || (美) [https://zh.wikipedia.org/wiki/%E5%A1%9E%E7%B9%86%E7%88%BE%C2%B7P%C2%B7%E4%BA%A8%E5%BB%B7%E9%A0%93 塞缪尔·亨廷顿] || 简体PDF(修订版)<br>简体PDF<br>简体EPUB<br>简体MOBI<br>英文EPUB || 2018-09-06<br>2013-05-30<br>2019-01-04<br>2015-11-14<br>2020-01-16 || [https://docs.google.com/document/d/1RyDwqzxQJMz1j6sCVF9_egnkZIKjnCkNuA_AvgbeTJE/ 简介]
+|-
+| 民主<br>''其它中文名：''<br>民主、民主化、去民主化及其相互依赖关系 || Democracy || (美) [https://en.wikipedia.org/wiki/Charles_Tilly 查尔斯·蒂利] || 简体PDF(扫描版)<br>英文PDF || 2015-02-09<br>2020-01-25 || [https://docs.google.com/document/d/1VHHYAeS2s-X8ZCYH8OXv4of3DmpnRLBL7bl9Lj1D9Ns/ 简介]
+|-
+| 牛津通识读本：民主 || Democracy<br>——A Very Short Introduction || (英) [https://en.wikipedia.org/wiki/Bernard_Crick 伯纳德·克里克] || 简体EPUB<br>简体MOBI<br>英文PDF<br>英文MOBI || 2021-02-15<br>2021-02-15<br>2015-12-11<br>2020-12-07 || [https://docs.google.com/document/d/1aOzzp1_w4E2H2Y7l5SMJz1Jo1uNV3ejU-yJ2DqhyVQg/ 简介]
+|-
+| 牛津通识读本：公民 || Citizenship<br>——A Very Short Introduction || (英) 理查德·贝拉米 || 英文PDF || 2020-03-16 || [https://docs.google.com/document/d/1A1vhaIPXDWlmHAN_0tMI9d0Bq5fpsBG8_23IuIFf_Dg/ 简介]
+|-
+| 代议制政府 || Considerations on Representative Government || (英) [https://zh.wikipedia.org/wiki/%E7%BA%A6%E7%BF%B0%C2%B7%E6%96%AF%E5%9B%BE%E5%B0%94%E7%89%B9%C2%B7%E5%AF%86%E5%B0%94 约翰·密尔] || 简体PDF<br>简体PDF(扫描版)<br>英文PDF || 2013-08-22<br>2019-10-26<br>2020-01-25 || [https://docs.google.com/document/d/11KFvZs1DHqiPdDvG3V8AjvZKu0HoUR2oRD-35AUwF_4/ 简介]
+|-
+| 社会契约论<br>''其它中文名：''<br>民约论 || The Social Contract || (法) [https://zh.wikipedia.org/wiki/%E8%AE%A9-%E9%9B%85%E5%85%8B%C2%B7%E5%8D%A2%E6%A2%AD 让-雅克·卢梭] || 简体PDF<br>简体PDF(扫描版)<br>简体EPUB<br>简体MOBI || 2014-01-09<br>2019-10-27<br>2017-05-06<br>2015-05-11 || [https://docs.google.com/document/d/1Sao10yvWHwmjgEpjlLf8fTM3HMlh6Xil00TMmeV5Otw/ 简介]
+|-
+| 论法的精神<br>''其它中文名：''<br>法意 || The Spirit of the Laws || (法) [https://zh.wikipedia.org/wiki/%E5%AD%9F%E5%BE%B7%E6%96%AF%E9%B8%A0 孟德斯鸠] || 简体PDF<br>简体PDF(大字版)<br>简体PDF(共2册 扫描版)<br>简体EPUB<br>简体MOBI<br>英文PDF || 2014-01-09<br>2017-03-24<br>2018-12-03<br>2015-05-11<br>2015-05-11<br>2020-01-25 || [https://docs.google.com/document/d/1X9sXgpIqLeJ75JiQTurt6E2bhd4JbwWc2r4nP3c9rxA/ 简介]
+|-
+| 联邦党人文集<br>''其它中文名：''<br>联邦主义者文集<br>美国宪法原理 || The Federalist Papers || (美) [https://zh.wikipedia.org/wiki/%E4%BA%9A%E5%8E%86%E5%B1%B1%E5%A4%A7%C2%B7%E6%B1%89%E5%AF%86%E5%B0%94%E9%A1%BF 亚历山大·汉密尔顿]<br>(美) [https://zh.wikipedia.org/wiki/%E8%A9%B9%E5%A7%86%E6%96%AF%C2%B7%E9%BA%A6%E8%BF%AA%E9%80%8A 詹姆斯·麦迪逊]<br>(美) [https://zh.wikipedia.org/wiki/%E7%BA%A6%E7%BF%B0%C2%B7%E6%9D%B0%E4%BC%8A 约翰·杰伊] || 简体PDF(扫描版)<br>简体EPUB<br>简体MOBI<br>英文PDF || 2013-11-27<br>2014-01-09<br>2015-05-11<br>2020-01-20 || [https://docs.google.com/document/d/1oQO7eAn0NDESpug4TkKYck5gfGHEFxKEE-01wQ-np34/ 简介]
+|-
+| 控制国家<br>——西方宪政的历史 || Controlling the State<br>——Constitutionalism from Ancient Athens to Today || (美) 斯科特·戈登 || 简体PDF(扫描版)<br>英文PDF || 2017-08-13<br>2020-01-20 || [https://docs.google.com/document/d/1PxJayhqBxwEJJCx3n3W9LpXNU7ARiQDY86DytmbVwhc/ 简介]
+|-
+| 历史的终结及最后之人 || The End of History and the Last Man || (美) [https://zh.wikipedia.org/wiki/%E6%B3%95%E8%98%AD%E8%A5%BF%E6%96%AF%C2%B7%E7%A6%8F%E5%B1%B1 弗朗西斯·福山] || 简体PDF<br>简体EPUB<br>英文PDF || 2013-01-01<br>2013-09-13<br>2020-01-20 || [https://docs.google.com/document/d/1aVTuQ5_85pkeLzwRXu_V2lJbDcg8UrWOmDbLIjOr-1Y/ 简介]
+|-
+| 民主的历程<br>——公元前508年~1993年<br>''其它中文名：''<br>民主<br>——未竟之旅，公元前508年至公元1993年 || Democracy<br>——The Unfinished Journey, 508 BC to AD 1993 || (英) [https://en.wikipedia.org/wiki/John_Dunn_%28political_theorist%29 约翰·邓恩] (主编) || 简体PDF(扫描版) || 2014-06-22 || [https://docs.google.com/document/d/1FfmKtjOMRnQ51xLgtGs6-3WuFN97vnv6lGHKj4NawAk/ 简介]
+|-
+| 欧洲民主史<br>——从孟德斯鸠到凯尔森 || A History of Democracy in Europe<br>——From Montesquieu to 1989 || (意) 萨尔沃·马斯泰罗 || 简体PDF(扫描版) || 2014-07-27 || [https://docs.google.com/document/d/1n_GEtA7CSTQ84iJ-U2Bryh6ZPacjrcn7mloh8K3xXrQ/ 简介]
+|-
+| 论李维<br>''其它中文名：''<br>李维史论<br>罗马史论<br>论李维罗马史 || Discourses on Livy || (意) [https://zh.wikipedia.org/wiki/%E9%A6%AC%E5%9F%BA%E7%B6%AD%E5%88%A9 尼可罗·马基亚维利] || 简体PDF(3卷本 扫描版)<br>英文PDF(3卷本) || 2020-03-25<br>2018-12-04 || [https://docs.google.com/document/d/1gQX2zJTMeiMgYxsCRrL41ZAYnaLKurwEqaedmEpKZ98/ 简介]
+|-
+| 平民政治的基本原理 || The Fundamental Principles of Government || (美) [https://zh.wikipedia.org/wiki/%E8%8A%AE%E6%81%A9%E6%96%BD 保罗·芮恩施] || 简体PDF(扫描版) || 2013-01-14 || [https://docs.google.com/document/d/1iBH7-ShrIOhtymZ4qDDAnFaZ0JcnqT6tglmfvt8IwuI/ 简介]
+|-
+| 宪政与权利 || N/A || (多人) || 简体PDF || 2013-04-13 || [https://docs.google.com/document/d/1VLob9Ks1MQlHSIL4tWfByz5qpbx79Mo8XCzFXl9Q5y0/ 简介]
+|-
+| 宪政主义<br>——观念与制度的转捩 || N/A || [https://zh.wikipedia.org/wiki/%E7%8E%8B%E6%80%A1 王怡] || 简体PDF(扫描版) || 2013-05-19 || [https://docs.google.com/document/d/1InZKdJ2itdZzAoYO1V13uW_6PCPs8AxIygdvkTvTNfU/ 简介]
+|-
+| 各国民权运动史 || N/A || 董之学 || 繁體PDF(竪排掃描版) || 2016-07-15 || [https://docs.google.com/document/d/1uFuOmfaIau_PkdkeRgM4DOBUCOgDmSWAjHlXU3zSHNs/ 简介]
+|-
+| 罗伯特议事规则 || Robert's Rules of Order || (美) [https://zh.wikipedia.org/wiki/%E4%BA%A8%E5%88%A9%C2%B7%E9%A6%AC%E4%B8%81%C2%B7%E7%BE%85%E4%BC%AF%E7%89%B9 亨利·马丁·罗伯特]<br>等 || 简体MOBI(第10版)<br>英文EPUB(第11版) || 2015-05-12<br>2020-01-20 || [https://docs.google.com/document/d/1IcpE6gLKVX1qQqTdFiQfZeS_NSfu27s4EAdrnnYh170/ 简介]
+|-
+| 可操作的民主<br>——罗伯特议事规则下乡全纪录 || N/A || 寇延丁<br>袁天鹏 || 简体EPUB<br>简体MOBI<br>简体PDF(扫描版) || 2015-11-14<br>2020-11-22<br>2015-05-12 || [https://docs.google.com/document/d/14lrDDRRIb9zk0mxOpfP97rEOVgvnDC8cdvF-Jt5dcnE/ 简介]
+|}
