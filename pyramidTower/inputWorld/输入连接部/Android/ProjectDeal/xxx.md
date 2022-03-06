@@ -72,40 +72,40 @@ $AppEnd 事件：是指应用程序退出，包括应用程序的正常退出、
 
 $AppViewScreen 事件：是指应用程序页面浏览，对于 Android 应用程序来说，就是指切换 Activity 或 Fragment。
 
-$AppClick 事件：是指应用程序控件点击，也即 View 被点击，比如点击 Button、ListView 等。
-APP 多进程如何判断？
-APP 奔溃被强杀怎么判断？
+$AppClick 事件：是指应用程序控件点击，也即 View 被点击，比如点击 Button、ListView 等。  
+APP 多进程如何判断？  
+APP 奔溃被强杀怎么判断？   
 
-因为 Android 系统没有直接的方法判断 APP 处于前台还是后台，所以我们需要一些假定逻辑来实现这个功能。采用 ContentProvider 机制来解决多进程的问题，并通过数据库或者 SharedPreferences 来存储这些状态。
-对于奔溃强杀问题，我们引入 Session 这个概念。
+因为 Android 系统没有直接的方法判断 APP 处于前台还是后台，所以我们需要一些假定逻辑来实现这个功能。采用 ContentProvider 机制来解决多进程的问题，并通过数据库或者 SharedPreferences 来存储这些状态。  
+对于奔溃强杀问题，我们引入 Session 这个概念。  
 
-当一个页面退出了，如果 30 s 内没有新的页面打开那么我们认为应用进入后台了。
-当一个页面显示了，如果和上一个页面退出的时间超过了 30 s 我们认为 APP 重新处于前台了。
+当一个页面退出了，如果 30 s 内没有新的页面打开那么我们认为应用进入后台了。  
+当一个页面显示了，如果和上一个页面退出的时间超过了 30 s 我们认为 APP 重新处于前台了。  
 
 具体方案：
 
-注册 ActivityLifecycleCallbacks，监听 Activity 的生命周期。并采用 ContentProvider + SharedPreferences 的方式进行进程间数据共享，注册 ContentObserver 来监听跨进程间的数据通信。
-页面退出的时候（onPause）启动一个倒计时 30 s ，如果 30 s 内没有新的界面显示触发 AppEnd 。如果有些页面那么，我们存储一个新的标记为来标记这个新页面（cp + sp）进行存储。然后通过 ContentObserver 监听新页面标记位的改变，取消定时器。如果 30 s 内没有新的页面（按 home 建 、退出、奔溃、强退等）我们会在下一次启动的时候补发这个 AppEnd 事件。
-在下一次启动的时候，（onStart（）），首先判断是否与上一个页面退出的时间间隔超过了 30 s ，如果没有超过 30 s 那么，那么无需补发 AppEnd，直接出发 AppScreen 事件。然后判断是否触发了 AppEnd，如果标志位是 true，那么出发 AppStart。反之不触发。如果超过了 30 s 那么就去看看是否已经触发了 AppEnd，如果没有则先补发 AppEnd，然后在 AppStart，最后 AppScreen。如果已经出发那么直接出发 AppStart，最后 AppScreeen。
+注册 ActivityLifecycleCallbacks，监听 Activity 的生命周期。并采用 ContentProvider + SharedPreferences 的方式进行进程间数据共享，注册 ContentObserver 来监听跨进程间的数据通信。  
+页面退出的时候（onPause）启动一个倒计时 30 s ，如果 30 s 内没有新的界面显示触发 AppEnd 。如果有些页面那么，我们存储一个新的标记为来标记这个新页面（cp + sp）进行存储。然后通过 ContentObserver 监听新页面标记位的改变，取消定时器。如果 30 s 内没有新的页面（按 home 建 、退出、奔溃、强退等）我们会在下一次启动的时候补发这个 AppEnd 事件。  
+在下一次启动的时候，（onStart（）），首先判断是否与上一个页面退出的时间间隔超过了 30 s ，如果没有超过 30 s 那么，那么无需补发 AppEnd，直接出发 AppScreen 事件。然后判断是否触发了 AppEnd，如果标志位是 true，那么出发 AppStart。反之不触发。如果超过了 30 s 那么就去看看是否已经触发了 AppEnd，如果没有则先补发 AppEnd，然后在 AppStart，最后 AppScreen。如果已经出发那么直接出发 AppStart，最后 AppScreeen。  
 
 ASM
 Android 应用程序的打包流程有需要的自行查阅。Goodle 提供了 Transform API，用于 .class 文件打包成 .dex 文件之前实现想要的操作。ASM 是 Java 字节码操作和分析框架，可以通过 ASM 实现动态改变类或增强既有类的功能。如，在 click 方法后增加埋点记录逻辑。
 
 动态代理
-代理 View.OnClickListener
-代理 Window.Callback
-代理 View.AccessibilityDelegate
-静态代理
-AspectJ 切面编程（AOP）
-ASM
-Javassist
-APT 注解处理器
-3.4 全埋点的缺点
-目前的全埋点虽然已经基本可以实现所有页面、View 事件等数据的采集，但是还存在不少问题：
+代理 View.OnClickListener  
+代理 Window.Callback  
+代理 View.AccessibilityDelegate  
+静态代理  
+AspectJ 切面编程（AOP）  
+ASM  
+Javassist  
+APT 注解处理器  
+3.4 全埋点的缺点  
+目前的全埋点虽然已经基本可以实现所有页面、View 事件等数据的采集，但是还存在不少问题：  
 
-关于业务数据的精准采集还比较困难，还不能准到跟手动代码埋点一样精确自如
-全埋点数据收集方式是通过全量采集后通过后台进行筛选，这就产生了大量的冗余数据，一定程度上浪费了一些终端与服务器的资源
-版本迭代可能会造成的不同版本之前页面事件、View 事件不一致，目前还没想到一个很简单的方式去管理
-3.5 全埋点优化
-完善配置化方案，通过后台的配置下发，精准打捞目标埋点，减少冗余数据，节省系统资源。开发圈选工具，使用圈选工具产品可以自己提取想要统计的 View 的 ViewId、PageId 等 Key 值。逐步增加全埋点覆盖面、改进兼容性。
+关于业务数据的精准采集还比较困难，还不能准到跟手动代码埋点一样精确自如  
+全埋点数据收集方式是通过全量采集后通过后台进行筛选，这就产生了大量的冗余数据，一定程度上浪费了一些终端与服务器的资源  
+版本迭代可能会造成的不同版本之前页面事件、View 事件不一致，目前还没想到一个很简单的方式去管理  
+3.5 全埋点优化  
+完善配置化方案，通过后台的配置下发，精准打捞目标埋点，减少冗余数据，节省系统资源。开发圈选工具，使用圈选工具产品可以自己提取想要统计的 View 的 ViewId、PageId 等 Key 值。逐步增加全埋点覆盖面、改进兼容性。  
 
