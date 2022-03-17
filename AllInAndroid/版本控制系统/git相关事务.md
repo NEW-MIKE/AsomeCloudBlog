@@ -112,6 +112,8 @@ $ git merge experiment
 
 在进行合并之前，codereview git diff --name-status <commit> <commit>
 
+合码冲突的地方，可以进行选择性的选择代码的存在，一个一个的选择。最终合入代码
+
 ### 三，自己对于开发状态的管理：
 
 1，管理我的commit：
