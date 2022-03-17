@@ -46,9 +46,10 @@ Hi xxx! You've successfully authenticated, but GitHub does not provide shell acc
 # 删除全局设置
 git config --global --unset user.name
 git config --global --unset user.email
-
+查看用户名：git config user.name查看密码：git config user.password查看邮
 # 添加本地设置
-# 设置为私有仓库的GitHub账号邮箱和公有账号的GitHub邮箱。
+# 设置为私有仓库的GitHub账号邮箱和公有账号的GitHub邮箱。配置了这些之后，我们就能够成功的从远程拉取仓库了，拉取之后，cd到仓库目录下，配置该仓库使用的用户名和邮箱：就是说，跑到仓库下面去进行设置就可以了。
+
 git config --local user.name xxxx
 git config --local user.email xxx
 ```
@@ -58,7 +59,7 @@ git config --local user.email xxx
 ```text
 git remote add origin git@github_public:xxx/example.git # public user
 git remote add origin git@github_private:xxx/example.git # priavate user
-ps：设置的时候，也是要如此来进行
+ps：设置的时候，也是要如此来进行，如果更新了自己的密钥，这里需要重新设置一下
 git remote set-url origin git@github_mike:NEW-MIKE/Blog2Me.git
 ```
 
@@ -147,3 +148,5 @@ git stash  把当前的工作隐藏起来 等以后恢复现场后继续工作gi
 维持git 的更新和追踪github的政策的变化
 
 git add . 会把本地所有untrack的文件都加入暂存区，并且会根据.[gitignore](https://so.csdn.net/so/search?q=gitignore&spm=1001.2101.3001.7020)做过滤，但是git add * 会忽略.gitignore把任何文件都加入
+
+至此，git自由了。还有其他的算法自由，操作系统自由等等需要去实现，以及股票自由。
