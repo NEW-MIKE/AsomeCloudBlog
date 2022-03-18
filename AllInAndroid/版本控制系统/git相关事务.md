@@ -151,4 +151,25 @@ git stash  把当前的工作隐藏起来 等以后恢复现场后继续工作gi
 
 git add . 会把本地所有untrack的文件都加入暂存区，并且会根据.[gitignore](https://so.csdn.net/so/search?q=gitignore&spm=1001.2101.3001.7020)做过滤，但是git add * 会忽略.gitignore把任何文件都加入
 
+绿色代理github：把以下的所有代理地址记录下来：
+
+1. 打开https://github.com.ipaddress.com/  如下图：
+   2.打开https://fastly.net.ipaddress.com/github.global.ssl.fastly.net#ipinfo 如下图：
+   3.打开https://github.com.ipaddress.com/assets-cdn.github.com 如下图：
+   4.打开电脑的hosts文件，把下列的东东写在最后，然后保存即可
+
+2. 140.82.113.4(图1的IP Address) github.com  
+   199.232.69.194(图2的IP Address) github.global.ssl.fastly.net 
+   185.199.108.153(图3的IP Address)  assets-cdn.github.com 
+   185.199.109.153(图3的IP Address)  assets-cdn.github.com 
+   185.199.110.153(图3的IP Address)  assets-cdn.github.com 
+   185.199.111.153(图3的IP Address)  assets-cdn.github.com
+
+   目标位置就是我们的hosts文件的位置地址了，一般都是C:\Windows\System32\drivers\etc\HOSTS
+   在终端在输以下指令刷新DNS（需要权限）在命令行窗口输入"ipconfig /flushdns"执行，刷新本地的DNS缓存数据
+
+   ```
+   sudo killall -HUP mDNSResponder;say DNS cache has been flushed
+   ```
+
 至此，git自由了。还有其他的算法自由，操作系统自由等等需要去实现，以及股票自由。
