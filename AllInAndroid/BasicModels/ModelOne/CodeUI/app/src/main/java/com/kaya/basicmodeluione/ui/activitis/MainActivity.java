@@ -1,7 +1,7 @@
 package com.kaya.basicmodeluione.ui.activitis;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
@@ -9,12 +9,12 @@ import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 
 import com.kaya.basicmodeluione.R;
 import com.kaya.basicmodeluione.base.BaseActivity;
-import com.kaya.basicmodeluione.ui.fragments.fragmentA;
-import com.kaya.basicmodeluione.ui.fragments.fragmentB;
+import com.kaya.basicmodeluione.ui.fragments.FragmentB;
+import com.kaya.basicmodeluione.ui.fragments.FragmentC;
+import com.kaya.basicmodeluione.ui.fragments.FragmentA;
 import com.kaya.basicmodeluione.view.RVPIndicator;
 
 import java.util.ArrayList;
@@ -53,6 +53,10 @@ public class MainActivity extends BaseActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.action_search:
+                FloatActivity.actionStart(this,"dd");
+                break;
+            case R.id.action_login:
+                FloatActivity.actionStart(this,"dd");
                 break;
             default:
                 break;
@@ -63,7 +67,11 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initToolBar() {
         mCommonToolbar.setLogo(R.mipmap.logo);
-        setTitle("123");
+        ActionBar actionBar = getSupportActionBar();
+        if(actionBar != null){
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+        setTitle("");
 
     }
 
@@ -71,9 +79,9 @@ public class MainActivity extends BaseActivity {
     public void initDatas() {
         mDatas = Arrays.asList(getResources().getStringArray(R.array.home_tabs));
         mTabContents = new ArrayList<>();
-        mTabContents.add(new fragmentA());
-        mTabContents.add(new fragmentB());
-        mTabContents.add(new fragmentA());
+        mTabContents.add(new FragmentA());
+        mTabContents.add(new FragmentB());
+        mTabContents.add(new FragmentC());
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {
