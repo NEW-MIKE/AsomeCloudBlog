@@ -173,3 +173,6 @@ git add . 会把本地所有untrack的文件都加入暂存区，并且会根据
    ```
 
 至此，git自由了。还有其他的算法自由，操作系统自由等等需要去实现，以及股票自由。
+
+
+如何将git log导出来来呢：git log --reverse --pretty=oneline > log.txt
