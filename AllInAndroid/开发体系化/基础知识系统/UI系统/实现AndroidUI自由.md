@@ -19,6 +19,13 @@
 1，找一些具有优秀基因的代码放在这里，然后对其进行解剖
 https://github.com/wasabeef/awesome-android-ui#ActionBar
 
+本文为那些不错的Android开源项目第一篇——个性化控件(View)篇，**主要介绍Android上那些不错个性化的View，包括ListView、ActionBar、Menu、ViewPager、Gallery、GridView、ImageView、ProgressBar及其他如Dialog、Toast、EditText、TableView、Activity Animation等等。**
+https://www.trinea.cn/Android/android-open-source-projects-view/
+
+A curated list of awesome Android UI/UX libraries.：https://github.com/wasabeef/awesome-android-ui
+
+开发中最常用的GitHub上 优秀的 Android 开源项目整理（精品）：https://www.geek-share.com/detail/2768789402.html
+
 2，找出可以优化的空间，然后对其进行优化，那就要建立自己的优化识别体系，
 
 #### 三，自由化的操作
