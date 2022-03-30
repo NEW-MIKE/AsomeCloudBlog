@@ -21,3 +21,5 @@ Android官方培训课程中文版(v0.9.2)，可以完成基本的开发的引�
 What are some good open source android apps?I've been messing around with android dev for almost 3 years now but most of my apps have been pretty simple and small.https://www.reddit.com/r/androiddev/comments/6sdv7i/what_are_some_good_open_source_android_apps/
 
 A curated list of Android Complete References at one place. A complete reference for android developers. Here you can find references about everything you use while Android Development.：https://github.com/amitshekhariitbhu/awesome-android-complete-reference
+
+这里是高品质的 Computer Science 爱好者社区，致力于为 Computer Science 开发者提供一个分享创造、结识伙伴、协同互助的平台。在这里你可以讨论和分享 Computer Science 相关知识。https://learnku.com/cs

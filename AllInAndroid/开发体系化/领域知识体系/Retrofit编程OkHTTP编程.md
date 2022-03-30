@@ -1,0 +1,3 @@
+OkHttp or Retrofit for Android?Deciding which to pick when doing a project  https://medium.com/mobile-app-development-publication/okhttp-or-retrofit-for-android-fc00f7aa3daf
+
+This is the first tutorial in an extensive series on Retrofit. The series dives through all aspects of Retrofit and prepares you for many potential use cases. You’ll get to know Retrofit’s range of functions and extensibility.https://futurestud.io/tutorials/retrofit-getting-started-and-android-client

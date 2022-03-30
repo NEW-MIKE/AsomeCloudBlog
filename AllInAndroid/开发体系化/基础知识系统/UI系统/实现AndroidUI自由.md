@@ -26,6 +26,8 @@ A curated list of awesome Android UI/UX libraries.：https://github.com/wasabeef
 
 开发中最常用的GitHub上 优秀的 Android 开源项目整理（精品）：https://www.geek-share.com/detail/2768789402.html
 
+`Android`事件分发机制是`Android`开发者必须了解的基础，网上有大量关于`Android`事件分发机制的文章，但存在一些问题：内容不全、思路不清晰、无源码分析、简单问题复杂化等等 今天，我将全面总结`Android`的事件分发机制，我能保证这是市面上的最全面、最清晰、最易懂的 https://blog.csdn.net/carson_ho/article/details/54136311
+
 2，找出可以优化的空间，然后对其进行优化，那就要建立自己的优化识别体系，
 
 #### 三，自由化的操作
