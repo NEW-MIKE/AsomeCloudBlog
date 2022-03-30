@@ -59,7 +59,7 @@ git config --local user.email xxx
 ```text
 git remote add origin git@github_public:xxx/example.git # public user
 git remote add origin git@github_private:xxx/example.git # priavate user
-ps：设置的时候，也是要如此来进行，如果更新了自己的密钥，这里需要重新设置一下
+ps：设置的时候，也是要如此来进行，如果更新了自己的密钥，这里需要重新设置一下，也就是更新
 git remote set-url origin git@github_mike:NEW-MIKE/Blog2Me.git
 ```
 
