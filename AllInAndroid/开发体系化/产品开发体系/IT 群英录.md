@@ -8,3 +8,5 @@
 Senior Analyst @ Baidu, HUSTer, Father, Wuhan → Beijing, love Podcast, Typography, MOOC, and Table Tennis.https://fangfrancis.github.io/
 
 对于这个世界，我愿意从美好的角度去看待它。尽管，我知道，它有时是残酷的！To Be a Better Man https://michael728.github.io/
+
+让技术为我所用，博客描述：目前正在整理一套 安卓高级开发知识点 请多多支持。https://blog.csdn.net/u014158743

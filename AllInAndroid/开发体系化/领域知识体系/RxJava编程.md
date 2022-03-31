@@ -30,3 +30,9 @@ RxJava和LiveData都是在Android Architecture Components推荐使用的库，Li
 Hello, I have spend a lot of time learning and implementing Livedata (especially MediatorLivedata) in business logic, because it helps to add data from various sources. However, it still lacks powerful RxJava2 implementation. It seems that RxJava is used primarily in Business logic, but in fact I saw a lot of companies using RxJava with UI with additional features/libraries. This actually makes LiveData irrelevant in presentation logic.. So I would like to know if LiveData is somehow better/cleaner in presentation logic(using it in ViewModel) vs RxJava. What would you suggest looking in future? :)https://www.reddit.com/r/androiddev/comments/946oss/livedata_vs_rxjava_2/
 
 Android LiveData vs RxJava https://medium.com/@s4y.solutions/android-livedata-vs-rxjava-b7fd4e166f24
+
+RxJava 全部范例：https://yy123.ink/example/example?lang=java&type=class&id=7950
+
+https://www.programcreek.com/java-api-examples/?api=io.reactivex.rxjava3.core.ObservableTransformer
+
+Implementing Custom Operators in RxJava   https://www.baeldung.com/rxjava-custom-operators

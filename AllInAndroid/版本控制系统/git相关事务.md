@@ -107,12 +107,18 @@ git push origin :master
 
 ```console
 git checkout master
-$ git merge experiment
+$ git merge experiment//此处的意义在于合并其他的分支到当前分支。
 ```
 
 在进行合并之前，codereview git diff --name-status <commit> <commit>
 
 合码冲突的地方，可以进行选择性的选择代码的存在，一个一个的选择。最终合入代码
+
+推送的时候是 git push -u origin xxxx    git push -u origin master 如果当前分支与多个主机存在追踪关系，则可以使用 -u 参数指定一个默认主机，这样后面就可以不加任何参数使用git push，
+
+然后到仓库去可以看到从远程库的master分支向上游仓库的master分支申请提交代码
+Able to merge代表你的代码与上游代码没有冲突，可以提交
+然后点击 create pull request，进入下面页面：等待拥有者审批
 
 ### 三，自己对于开发状态的管理：
 
