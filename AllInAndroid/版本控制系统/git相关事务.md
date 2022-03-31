@@ -67,6 +67,10 @@ git remote set-url origin git@github_mike:NEW-MIKE/Blog2Me.git
 
 ### 二，从公有的库里面拉取新的库，开辟新的分支，并且提交自己的分支，删除自己的分支；
 
+查看当前分支名称：
+
+git branch | grep "*"
+
 首先克隆一份原仓库到本地进行操作：
 
 ```bash
@@ -129,7 +133,7 @@ git log  查看提交历史git log --oneline 以精简模式显示查看提交�
 回滚之后查看最近几次的提交记录：git reflog 结合git reset --hard commit_id 就可以在任意的版本之间进行任意的跳动了。
 
 然后如果想要利用不同的回滚的方式来进行回滚：
-git reset –-soft 目标版本号 可以把版本库上的提交回退到暂存区，修改记录保留
+git reset –-soft 目标版本号 /以及想要回退的文件      可以把版本库上的提交回退到暂存区，修改记录保留
 git reset –-mixed 目标版本号 可以把版本库上的提交回退到工作区，修改记录保留，那么在这里，我就可以直接回滚了。
 git reset –-hard  可以把版本库上的提交彻底回退，修改的记录全部revert。
 
