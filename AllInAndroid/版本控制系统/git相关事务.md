@@ -22,6 +22,29 @@ Host github_private
 Hostname ssh.github.com
 IdentityFile ~/.ssh/private
 port 22
+
+# 公共
+Host github_mike
+UpdateHostKeys yes
+Hostname ssh.github.com
+IdentityFile ~/.ssh/new_mike
+port 22
+
+#个人
+Host github_isa
+Hostname ssh.github.com
+IdentityFile ~/.ssh/isa
+port 22
+
+Host gitee.com
+HostName gitee.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/gitee_rsa
+
+Host gitlab.com
+HostName gitlab.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/gitlab_rsa
 ```
 
 网上大部分教程的配置文件中`Hostname`都是`github.com`，配置成那样是不能正常SSH访问的。但是是否可以通过HTTPS来进行访问呢。
