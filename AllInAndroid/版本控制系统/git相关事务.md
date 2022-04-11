@@ -84,6 +84,7 @@ git remote add origin git@github_public:xxx/example.git # public user
 git remote add origin git@github_private:xxx/example.git # priavate user
 ps：设置的时候，也是要如此来进行，如果更新了自己的密钥，这里需要重新设置一下，也就是更新
 git remote set-url origin git@github_mike:NEW-MIKE/Blog2Me.git
+git remote add origin git@gitlab_isa:awesome-group-api/api-auto-demo.git
 ```
 
 其实，上面的配置文件的意思就是，按照你设置远程仓库时使用不同的 Host 名称，查找`~/.ssh/config`文件，使用不同的 SSH 文件连接到 GitHub。这样你就将是以不同的身份访问 GitHub 仓库。
