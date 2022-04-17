@@ -6,5 +6,3 @@ git add .
 git commit -m "%commit_msg%"
 :: 推送到远程副分支  master
 git push origin master
-:: 停顿 
-pause
