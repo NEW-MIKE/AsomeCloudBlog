@@ -18,3 +18,11 @@ Senior Analyst @ Baidu, HUSTer, Father, Wuhan → Beijing, love Podcast, Typogra
 Stay Hungry. Stay Foolish  https://github.com/sunxu3074
 
 阿里巴巴ICBU交易履约团队诚招P6~P7的前端、Android/iOS开发，有兴趣的同学简历请发送到quchao.qu@alibaba-inc.com   https://github.com/JsonChao
+
+select * from utils  https://github.com/Blankj
+
+I am an Android engineer who has worked for nine years.   https://github.com/chiclaim
+
+自制电子书： https://github.com/JackChan1999
+
+[2019.Fall- ] joint Ph.D student (CS) @ Zhejiang University & Westlake University. https://github.com/bighuang624
