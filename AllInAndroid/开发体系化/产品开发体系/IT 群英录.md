@@ -26,3 +26,19 @@ I am an Android engineer who has worked for nine years.   https://github.com/chi
 自制电子书： https://github.com/JackChan1999
 
 [2019.Fall- ] joint Ph.D student (CS) @ Zhejiang University & Westlake University. https://github.com/bighuang624
+
+上海交通大学东岳网络工作室 Shanghai Jiao Tong University Dongyue Web Studio   https://github.com/dyweb
+
+一线互联网面试官提供海内外公司一对一入职套餐，入职不成功不收费.  https://github.com/resumejob
+
+一只向上爬的蜗牛  https://github.com/Snailclimb
+
+整理it资料的百科全库  https://github.com/0voice
+
+GitHub 技术社区 Doocs，致力于打造一个内容完整、持续成长的互联网开发者学习生态圈！ https://github.com/doocs
+
+极客优才开源项目库  https://github.com/geekcompany
+
+https://awesome-interview.github.io/Awesome-Interview/
+
+2022 滴滴、阿里内推可加我微信: trinea   https://github.com/Trinea
