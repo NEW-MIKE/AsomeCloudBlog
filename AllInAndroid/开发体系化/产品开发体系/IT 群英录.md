@@ -1,3 +1,10 @@
+程序员杂志      https://blog.csdn.net/programmer_editor/
+https://codechina.gitcode.host/programmer/heti-test/25.html
+
+
+
+
+
 那些年吹过的牛逼，还有很多没有实现 ....https://www.zhangln.com/about/
 
 公告就是醒目，为了提醒自己多学习，多总结~
@@ -17,7 +24,7 @@ Senior Analyst @ Baidu, HUSTer, Father, Wuhan → Beijing, love Podcast, Typogra
 
 Stay Hungry. Stay Foolish  https://github.com/sunxu3074
 
-阿里巴巴ICBU交易履约团队诚招P6~P7的前端、Android/iOS开发，有兴趣的同学简历请发送到quchao.qu@alibaba-inc.com   https://github.com/JsonChao
+阿里巴巴ICBU交易履约团队诚招P6~P7的前端、Android/iOS开发，有兴趣的同学简历请发送到quchao.qu@alibaba-inc.com   https://github.com/JsonChao           https://juejin.cn/user/4318537403878167
 
 select * from utils  https://github.com/Blankj
 
