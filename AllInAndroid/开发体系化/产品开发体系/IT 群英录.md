@@ -49,3 +49,17 @@ GitHub 技术社区 Doocs，致力于打造一个内容完整、持续成长的�
 https://awesome-interview.github.io/Awesome-Interview/
 
 2022 滴滴、阿里内推可加我微信: trinea   https://github.com/Trinea
+
+少将全栈是一个关注移动互联网的Blog，实践，分享，共成长。      https://www.whatled.com/
+
+一个留学日本的哥们  https://awhisper.github.io/
+
+迷途   https://yougaking.github.io/
+
+法国的一个哥们   https://qifanyang.com/aboutme/
+
+吴小龙  https://wuxiaolong.me/
+
+感觉还可以吧，收集一些最新的记录下来 https://mjd507.github.io/
+
+### 末
