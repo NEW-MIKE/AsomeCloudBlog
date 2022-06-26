@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:background="@color/bg_dark">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/edit_one"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_two"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_three"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_four"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_5"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_6"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_7"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <include
+                    android:id="@+id/edit_8"
+                    layout="@layout/edit_layout"
+                    tools:layout_editor_absoluteX="-16dp" />
+
+                <Spinner
+                    android:id="@+id/select1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/edit2_8"
+                layout="@layout/edit2_layout"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <include
+                android:id="@+id/edit2_7"
+                layout="@layout/edit2_layout"
+                tools:layout_editor_absoluteX="-16dp" />
+
+            <include
+                android:id="@+id/edit2_6"
+                layout="@layout/edit2_layout"
+                tools:layout_editor_absoluteX="-16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

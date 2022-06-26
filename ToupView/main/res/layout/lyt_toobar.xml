@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/btn_usb"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_connect"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btn_setting"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:text="设置参数"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_loop"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/btn_loop"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_loop"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/btn_auto_star"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_auto_select"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/btn_guide"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_guide"
+        tools:ignore="ContentDescription"/>
+
+    <ImageButton
+        android:id="@+id/btn_stop"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_stop"
+        tools:ignore="ContentDescription" />
+
+    <Spinner
+        android:id="@+id/spinner_expose"
+        android:layout_width="100dp"
+        android:layout_marginVertical="10dp"
+        android:layout_height="match_parent" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="200dp"
+        android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/btn_brain"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/brain"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/btn_cam_setup"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_cam_setup"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/btn_start_stream"
+        android:layout_width="@dimen/iconSize"
+        android:layout_height="@dimen/iconSize"
+        android:layout_gravity="center"
+        android:text="开启拉流"
+        android:scaleType="fitCenter"/>
+
+</LinearLayout>
