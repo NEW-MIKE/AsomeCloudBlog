@@ -27,5 +27,22 @@ https://www.jianshu.com/p/e5e8a98fc5d9   Android开发之漂亮Button样式
 
 
 
+#### 三，动画样式：
+
+1，创建一个anim，使用xml来进行控制。
+
+2，或者直接使用属性动画，直接调用属性的值来进行控制。
+
+三种动画的不同的使用方式：  https://blog.csdn.net/guaisou/article/details/116993923
 
 
+
+搜索技巧：
+
+shape 圆角这类的，找到相关的类似的代码
+
+还有就是这些操作，在某些情况下可能不可以用。要找出来。
+
+#### 四，布局
+
+https://www.jianshu.com/p/17ec9bd6ca8a        约束布局ConstraintLayout看这一篇就够了
